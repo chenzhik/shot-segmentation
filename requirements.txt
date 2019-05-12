@@ -1,0 +1,18 @@
+OTHER LIBRARIES BESIDES OPENCV:
+
+numpy (version >= 1.14.3)
+
+scipy (version >= 1.1.0)
+
+matplotlib(if you want to show the plot curve)
+
+
+
+RUN COMMAND LINE:
+
+"python main.py your_file"
+
+other arguments:
+
+-save_frames: set 1 to save the boundary frames under the directory of your file
+-show_hist_diff: set 1 to show the ploted histogram differences picture
