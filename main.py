@@ -31,7 +31,8 @@ def video2frame(video_src_path, formats, frame_save_path):
     """
 
     f = open("./result.txt", 'w')
-    diff = 0.42
+    diff_threshold = 0.42
+    window_size = 10
 
     if os.path.isfile(video_src_path):
         video = video_src_path.split('/')[-1]
@@ -89,7 +90,7 @@ def video2frame(video_src_path, formats, frame_save_path):
     frame_diff[0] = 0
 
     vector = np.array(frame_diff)
-    indexes, _ = si.find_peaks(vector, height=diff, distance=10)
+    indexes, _ = si.find_peaks(vector, height=diff_threshold, distance=window_size)
 
     print('Numbers of shots', len(indexes))
 
